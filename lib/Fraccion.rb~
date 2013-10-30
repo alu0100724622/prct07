@@ -40,6 +40,16 @@ class Fraccion
 	def to_f()
 		@num.to_f/@den.to_f
 	end
+	#============================== SOBRECARGA DEL METODO (==) ===============================
+
+	def == (other)
+		
+		if ((@num == other.num) && (@den == other.den))
+			return true
+		end 
+			return false 
+	end 
+ 
 	
 	#================================ VALOR ABSOLUTO =========================================
 	
