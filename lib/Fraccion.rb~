@@ -1,5 +1,7 @@
 
 class Fraccion
+
+	include Comparable
 	
 	attr_accessor :num, :den		# define un metodo set y get para las variables num y den
 	
@@ -28,16 +30,15 @@ class Fraccion
 	
 	#================================== RACIONAL =============================================
 	
-	def mostrarRacional()
+	def to_s()
 		"#{@num}/#{@den}"
 		puts "El numerador #{num} y denominador #{den} en forma a/b es: #{@num}/#{@den}"
 	end
 	
 	#================================= FLOTANTE ==============================================
 	
-	def mostrarFlotante()
-		"#{num.to_f/den.to_f}"
-		puts "El numero racional #{@num}/#{@den} en forma flotante es: #{num.to_f/den.to_f}"
+	def to_f()
+		@num.to_f/@den.to_f
 	end
 	
 	#================================ VALOR ABSOLUTO =========================================
@@ -47,7 +48,7 @@ class Fraccion
 		den_abs = @den.abs
 		
 		"#{num_abs}/#{den_abs}"
-puts "El valor absoluto es: #{num_abs}/#{den_abs}"
+		puts "El valor absoluto es: #{num_abs}/#{den_abs}"
              Fraccion.new(@num.abs, @den.abs)
 	end
 	
@@ -108,6 +109,7 @@ puts "El valor absoluto es: #{num_abs}/#{den_abs}"
 		"#{@num % @den},#{other.num % other.den}"
 	
 	end
+=begin
 	
 	#==================================== MENOR ==========================================
 	
@@ -164,6 +166,19 @@ puts "El valor absoluto es: #{num_abs}/#{den_abs}"
 		
 		return false
 	end
+=end	
+
+	#======================= METODO OPERADOR DE LAS GALAXIAS (mayor, mayor igual, menor, menor igual) ========================
 	
+	def <=>(other)
+
+	return nil unless other.instance_of? Fraccion
+  	(num.to_f / den) <=> (other.num.to_f / other.den)
+
+	end 
+
+	
+
+
 	
 end

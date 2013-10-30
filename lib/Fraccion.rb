@@ -178,7 +178,4 @@ class Fraccion
 	end 
 
 	
-
-
-	
 end
