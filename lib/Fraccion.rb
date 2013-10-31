@@ -32,7 +32,7 @@ class Fraccion
 	
 	def to_s()
 		"#{@num}/#{@den}"
-		puts "El numerador #{num} y denominador #{den} en forma a/b es: #{@num}/#{@den}"
+		#puts "El numerador #{num} y denominador #{den} en forma a/b es: #{@num}/#{@den}"
 	end
 	
 	#================================= FLOTANTE ==============================================
@@ -53,19 +53,19 @@ class Fraccion
 	
 	#================================ VALOR ABSOLUTO =========================================
 	
-	def absoluto()
-		num_abs = @num.abs
-		den_abs = @den.abs
+	def abs()
 		
-		"#{num_abs}/#{den_abs}"
-		puts "El valor absoluto es: #{num_abs}/#{den_abs}"
-             Fraccion.new(@num.abs, @den.abs)
+		#"#{@num.abs}/#{@den.abs}"
+		#puts "El valor absoluto es: #{num_abs}/#{den_abs}"
+		
+		return Fraccion.new(@num.abs, @den.abs)
 	end
 	
 	#================================ RECIPROCO ==============================================
 	
 	def reciproco()
-	puts "El reciproco es : #{@den}/#{@num}"
+	#puts "El reciproco es : #{@den}/#{@num}"
+	
 	return Fraccion.new(den,num)
 
 	end

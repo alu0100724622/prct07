@@ -8,7 +8,7 @@ require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new
 task :default => :spec
 
-desc "Ejecutar las espectativas de la clase Point"
+desc "Ejecutar las espectativas de la clase Fraccion"
 task :local do
-  sh "rspec --format documentation -Ilib -Ispec spec/point_spec.rb"
+  sh "rspec --format documentation -Ilib -Ispec test/rspec_fraccion.rb"
 end

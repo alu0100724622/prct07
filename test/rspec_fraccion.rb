@@ -33,14 +33,14 @@ end
 	
 	it "el numero racional mostrado de la forma a/b debe ser" do
 	
-		@racional.mostrarRacional() == "1/2"
+		@racional.to_s() == "1/2"
 
 	
 	end
 	
 it "el numero racional mostrado en forma flotante debe ser" do
 	
-	@racional.mostrarFlotante() == 0.5
+	@racional.to_f() == 0.5
 	
 end
 
@@ -59,10 +59,10 @@ end
 
 	it "el valor absoluto para cada numero 1/5, -2/7, 3/-4, -5/-6 racional es" do
 	
-		@racional1.absoluto() == "1/5"
-		@racional2.absoluto() == "2/7"
-		@racional3.absoluto() == "3/4"
-		@racional4.absoluto() == "5/6"
+		@racional1.abs() == Fraccion.new(1,5)
+		@racional2.abs() == Fraccion.new(2,7)
+		@racional3.abs() == Fraccion.new(3,4)
+		@racional4.abs() == Fraccion.new(5,6)
 	
 	end
 
@@ -91,7 +91,7 @@ before :each do
 end
 
 	it "la fraccion opuesta de 3/7 debe ser" do
-		@racional.opuesto() == Fraccion.new(-3,7)
+		@racional.-@() == Fraccion.new(-3,7)
 	end
 
 end
@@ -122,15 +122,7 @@ describe "operaciones" do
 		(@numero1 / @numero2) == Fraccion.new(5,1)
 
 	end
-	it "division y reciproco" do
-
 	
-	
-
-	(@numero1 / @numero2).reciproco().to_s == "5/1"
-	
-	
-	end
 	
 	it "El resto de dos fracciones debe ser 1/1 % = 0 y 1/5 = 1" do
 	
@@ -155,7 +147,7 @@ describe "operaciones" do
 	end
 	
 	it "Se debe de poder comprobar si una fracion es igual a otra" do
-		@numero1.igual(@numero2).should be_false
+		@numero1.==(@numero2).should be_false
 	end
 	
 end
