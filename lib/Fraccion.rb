@@ -74,7 +74,7 @@ class Fraccion
 	
 	def -@()
 		
-		return Fraccion.new(num-2*num,den)
+		return Fraccion.new(-@num,den)
 
 	end
 	

@@ -1,5 +1,5 @@
 
-**************** PRÁCTICA 6 - LENGUAJES Y PARADIGMAS DE PROGRAMACIÓN ******************
+**************** PRÁCTICA 7 - LENGUAJES Y PARADIGMAS DE PROGRAMACIÓN ******************
 
 Autores: - Noelia Rodríguez Martín
 		 - Juan Manuel Ramos Pérez
@@ -8,9 +8,8 @@ Autores: - Noelia Rodríguez Martín
 		 
 OBJETIVO
 
-El objetivo de esta práctica es crear una clase Fracción usando Desarrollo Dirigido por el Comportamiento 
-(Behavior Driven Development - BDD) como caso particular del Desarrollo dirigido por pruebas 
-(Test Driven Development - TDD) usando como herramienta Rspec.
+Considerar la clase Ruby para representar fracciones que ha implementado usando el Desarrollo dirigido por pruebas (Test Driven Development - TDD) usando como herramienta Rspec. 
+Se debe realizar las modificaciones oportunas para contemplar el uso del módulo Comparable.
 
 
 CLASE FRACCIÓN
@@ -39,14 +38,14 @@ Debe: devolver el denominador
 Para ello el método retorna el denominador que se le asigna al crear un objeto de la clase Fracción.
 
 
--- Método mostrarRacional() --
+-- Método to_s() --
 
 Debe: mostrar el número racional en forma de fracción, a/b
 
 Para ello se muestra por pantalla el valor del numerador y del denominador separado por el carácter /
 
 
--- Método mostrarFlotante() --
+-- Método to_f() --
 
 Debe: calcular el valor de la fracción y mostrar el número racional en forma flotante
 
@@ -55,7 +54,7 @@ un número flotante (mediante el metodo de ruby to_f). De esta forma devolverá el
 y no como un número entero.
 
 
--- Método absoluto() --
+-- Método abs() --
 
 Debe: calcular la fracción en su forma de valor absoluto
 
@@ -69,12 +68,11 @@ Debe: calcular el recíproco de la fracción
 Para ello se retorna un nuevo objeto de la clase Fracción intercambiándose el numerador por el denominador.
 
 
--- Método opuesto() --
+-- Método opuesto  -@() --
 
 Debe: calcular el opuesto de una fraccion con -
 
-Para ello se retorna un nuevo objeto de la clase Fracción, siendo el numerador = numerador - 2 * numerador, 
-es decir, - numerador.
+Para ello se retorna un nuevo objeto de la clase Fracción, siendo el numerador = -numerador.
 
 
 -- Método +(other) -- 
@@ -117,20 +115,9 @@ Para ello se retorna un nuevo objeto de la clase Fraccion, se divide el numerado
 fraccion 1 y luego se divide el numerador entre el denominadro del 2, restamos la parte entera y lo multiplicamos por el divisor.
 
 
--- Método <(other) --
+-- Método <=>(other)
 
-Debe: calcular si una funcion es menor que otra
+Este metodo engloba a los métodos (<, <=, ==, >=, >). 
+En la llamada a este metodo se especificara que tipo de comparacion se quiere realizar con los dos numeros pasados por parametro, 
+pudiendo ser esta una de las cinco comparaciones antes mencionada.
 
-
--- Método >(other) --
-
-Debe: calcular si una funcion es mayor que otra.
-
-
--- Método <=(other) --
-
-Debe: calcular si una funcion es menor o igual que otra.
-
--- Método >=(other) --
-
-Debe: calcular si una funcion es menor o igual que otra.
