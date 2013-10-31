@@ -119,64 +119,6 @@ class Fraccion
 		"#{@num % @den},#{other.num % other.den}"
 	
 	end
-=begin
-	
-	#==================================== MENOR ==========================================
-	
-	#Método que comprueba si una funcion es menor que otra
-	
-	def <(other)
-		
-		if (@num/@den) < (other.num/other.den)
-			return true
-		end
-		
-		return false
-	
-	end
-	
-	#================================== MAYOR ============================================
-	
-	#Método que comprueba si una fraccion es mayor que otra
-	
-	def >(other)
-		if (@num/@den) > (other.num/other.den)
-			return true
-		end
-		
-		return false
-	end
-	
-	#=============================== METODO MENOR O IGUAL ================================
-	
-	def <=(other)
-		if (@num/@den) <= (other.num/other.den)
-			return true
-		end
-		
-		return false
-	end
-	
-	#=============================== METODO MAYOR O IGUAL ==================================
-	
-	def >=(other)
-		if (@num/@den) >= (other.num/other.den)
-			return true
-		end
-		
-		return false
-	end
-	
-	#================================ METODO IGUAL ==================================
-	
-	def igual(other)
-		if (@num/@den) == (other.num/other.den)
-			return true
-		end
-		
-		return false
-	end
-=end	
 
 	#======================= METODO OPERADOR DE LAS GALAXIAS (mayor, mayor igual, menor, menor igual) ========================
 	
