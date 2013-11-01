@@ -1,5 +1,6 @@
 
 require "./lib/Fraccion.rb"
+require "./lib/mcd.rb"
 
 	
 describe "numerador y denominador" do
