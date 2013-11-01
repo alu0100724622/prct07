@@ -1,3 +1,5 @@
+require "./lib/mcd.rb"
+
 
 class Fraccion
 
